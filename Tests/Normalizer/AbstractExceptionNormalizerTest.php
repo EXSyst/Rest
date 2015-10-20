@@ -9,19 +9,19 @@
  * file that was distributed with this source code.
  */
 
-namespace EXSyst\Component\Api\Tests\Exception;
+namespace EXSyst\Component\Api\Tests\Normalizer;
 
-use EXSyst\Component\Api\Exception\ExceptionInterface;
+use EXSyst\Component\Api\Normalizer\ExceptionNormalizerInterface;
 
 /**
  * @author Ener-Getick <egetick@gmail.com>
  */
-abstract class AbstractExceptionTest extends \PHPUnit_Framework_TestCase
+abstract class AbstractExceptionNormalizerTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @var ExceptionInterface
+     * @var ExceptionNormalizerInterface
      */
-    protected $exception;
+    protected $normalizer;
 
     public function setUp()
     {
@@ -30,6 +30,6 @@ abstract class AbstractExceptionTest extends \PHPUnit_Framework_TestCase
 
     public function testInterface()
     {
-        $this->assertInstanceOf(ExceptionInterface::class, $this->exception);
+        $this->assertInstanceOf(ExceptionNormalizerInterface::class, $this->normalizer);
     }
 }
